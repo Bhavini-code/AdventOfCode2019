@@ -1,6 +1,6 @@
 #%%
 #Read the input
-with open('input.txt') as file:
+with open('data/day1.txt') as file:
     module_mass=[int(line.strip()) for line in file]
 file.close()
 #%%
@@ -10,10 +10,8 @@ total_fuel=0
 for module in module_mass:
     fuel=get_fuel(module)
     total_fuel+=fuel
-    while fuel>6:
+    while fuel>7:
         fuel=get_fuel(fuel)
         total_fuel+=fuel
 print(total_fuel)
-
-
 # %%
